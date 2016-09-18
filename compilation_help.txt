@@ -1,0 +1,14 @@
+#ifdef MACOSX
+#include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#endif
+
+
+gcc -DMACOSX -framework OpenGL -framework GLUT -o myprog myprog.c
+
+I
+
+export LIBGL_ALWAYS_INDIRECT=1
+
+#include <GL/glut.h>
